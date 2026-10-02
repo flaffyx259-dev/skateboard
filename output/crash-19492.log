@@ -1,0 +1,100 @@
+CrashLog installed (tag='dbg'), log=C:\Users\vorob\Pictures\2018 Project - source\skateboard2018\output
+================================================================
+  skateboard2018 crash report
+================================================================
+time        : 2026-09-27 17:02:07
+pid         : 19492
+process     : D:\csgo 2018\csgo 2018 (supremacy)\csgo.exe
+reason      : unhandled exception
+build tag   : dbg
+log path    : C:\Users\vorob\Pictures\2018 Project - source\skateboard2018\output
+pdb         : <same folder> skateboard2018.pdb
+map         : <same folder> skateboard2018.map
+              load the pdb in a debugger to turn module+offset into file:line
+
+---- loaded modules (interesting ones) ----
+  vstdlib.dll              base=6FFE0000 size=00043000
+  tier0.dll                base=6F9F0000 size=005A4000
+  engine.dll               base=6F0C0000 size=008A1000
+  studiorender.dll         base=6CEB0000 size=0045C000
+  steamclient.dll          base=62AF0000 size=014AE000
+  tier0_s.dll              base=62A40000 size=000A1000
+  vstdlib_s.dll            base=629A0000 size=00098000
+  resourcepolicyclient.dll base=708D0000 size=00010000
+  client.dll               base=5CF70000 size=050E3000
+  skateboard2018.dll       base=5BB50000 size=005A7000
+
+exception  : 0x40010006  EXCEPTION_UNKNOWN
+address    : 0x76D7E702
+module     : KERNELBASE.dll
+module+off : KERNELBASE.dll+0014E702    <-- the exact spot, resolve via the pdb
+
+---- registers ----
+EAX=535FF230  EBX=00000000  ECX=00000002  EDX=00000000
+ESI=535FF555  EDI=535FF554  EBP=535FF28C  ESP=535FF230
+EIP=76D7E702  EFlags=00000216
+CS=0023 SS=002B DS=002B ES=002B
+
+---- bytes at fault address ----
+  8B 4C 24 54 33 CC E8 CD 6B 00 00 8B E5 5D C2 10
+  (paste into a disassembler at <module>+<offset> printed above)
+
+---- stack walk ----
+  EIP 76D7E702
+       -> KERNELBASE.dll+0014E702
+  [00] ntdll.dll+00048BAE
+  [01] KERNEL32.DLL+00030FD0
+  [02] ntdll.dll+0000AFDC
+  [03] ntdll.dll+0004C73E
+  [04] WS2_32.dll+0001257C
+  [05] WS2_32.dll+00012563
+  [06] ntdll.dll+00061D42
+  [07] DiscordHook.dll+000BEE1A
+  [08] DiscordHook.dll+000BEE1A
+  [09] DiscordHook.dll+0004696F
+  [10] DiscordHook.dll+0004670A
+  [11] WS2_32.dll+00012265
+  [12] ntdll.dll+00009788
+  [13] WS2_32.dll+0001BA90
+  [14] WS2_32.dll+000120DC
+  [15] ntdll.dll+0004C73E
+  [16] MSWSOCK.dll+00013614
+  [17] MSWSOCK.dll+00014CC8
+  [18] MSWSOCK.dll+000482A8
+  [19] MSWSOCK.dll+00015144
+  [20] MSWSOCK.dll+0001397B
+  [21] MSWSOCK.dll+0000D7B0
+  [22] MSWSOCK.dll+0001CD5B
+  [23] MSWSOCK.dll+0001C8B0
+  [24] MSWSOCK.dll+0001007D
+  [25] csgo.exe+000B0020
+  [26] ntdll.dll+00060959
+  [27] WS2_32.dll+00012E5B
+  [28] WS2_32.dll+00012EB9
+  [29] DiscordHook.dll+00091940
+  [30] WS2_32.dll+00012EDB
+  [31] ntdll.dll+0005A7D6
+  [32] MSWSOCK.dll+00009A69
+  [33] MSWSOCK.dll+00009CC1
+  [34] ntdll.dll+00076E9C
+  [35] MSWSOCK.dll+00008FCB
+  [36] MSWSOCK.dll+00008FFC
+  [37] csgo.exe+0002009E
+  [38] ntdll.dll+0004CB93
+  [39] ntdll.dll+00076E6C
+  [40] WS2_32.dll+00017DD5
+  [41] WS2_32.dll+00017CE0
+  [42] WS2_32.dll+00017CE0
+  [43] MSWSOCK.dll+00008169
+  [44] ntdll.dll+0003CA24
+  [45] ntdll.dll+0003C905
+  [46] ntdll.dll+0004F1EC
+  [47] ntdll.dll+0004F61F
+
+---- last operations (newest last) ----
+---- end of trace ----
+(0 entries, 0 dropped)
+
+================================================================
+  end of report
+================================================================

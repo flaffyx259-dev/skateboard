@@ -1,0 +1,103 @@
+CrashLog installed (tag='dbg'), log=C:\Users\vorob\Pictures\2018 Project - source\skateboard2018\output
+================================================================
+  skateboard2018 crash report
+================================================================
+time        : 2026-09-26 22:23:13
+pid         : 20576
+process     : D:\csgo 2018\csgo 2018 (supremacy)\csgo.exe
+reason      : unhandled exception
+build tag   : dbg
+log path    : C:\Users\vorob\Pictures\2018 Project - source\skateboard2018\output
+pdb         : <same folder> skateboard2018.pdb
+map         : <same folder> skateboard2018.map
+              load the pdb in a debugger to turn module+offset into file:line
+
+---- loaded modules (interesting ones) ----
+  tier0.dll                base=65630000 size=005A4000
+  vstdlib.dll              base=655E0000 size=00043000
+  engine.dll               base=64CB0000 size=008A1000
+  studiorender.dll         base=62AA0000 size=0045C000
+  steamclient.dll          base=58700000 size=014AE000
+  tier0_s.dll              base=58650000 size=000A1000
+  vstdlib_s.dll            base=585B0000 size=00098000
+  resourcepolicyclient.dll base=70D30000 size=00010000
+  client.dll               base=50C70000 size=050E3000
+  skateboard2018.dll       base=69040000 size=005A7000
+
+exception  : 0xC0000094  EXCEPTION_INT_DIVIDE_BY_ZERO
+address    : 0x690F16C2
+module     : skateboard2018.dll
+module+off : skateboard2018.dll+000B16C2    <-- the exact spot, resolve via the pdb
+note       : integer divide by zero.
+              if the module above is skateboard2018, the offending
+              line is doing 'x / 0' or 'x % 0' on an integer.
+
+---- registers ----
+EAX=00000272  EBX=0B45D3BC  ECX=00000000  EDX=00000000
+ESI=0057A6C4  EDI=0057A6B0  EBP=0057A6BC  ESP=0057A44C
+EIP=690F16C2  EFlags=00210246
+CS=0023 SS=002B DS=002B ES=002B
+
+---- bytes at fault address ----
+  F7 F1 89 55 94 8A 15 84 3C 54 69 88 95 1F FF FF
+  (paste into a disassembler at <module>+<offset> printed above)
+
+---- stack walk ----
+  EIP 690F16C2
+       -> skateboard2018.dll+000B16C2
+  [00] engine.dll+000AA6B0
+  [01] engine.dll+000AA6B0
+  [02] engine.dll+000AA6B0
+  [03] engine.dll+000AA6B0
+  [04] engine.dll+000C7CE9
+  [05] tier0.dll+00006890
+  [06] tier0.dll+0004D4A8
+  [07] tier0.dll+0004D4A8
+  [08] tier0.dll+0001DD1E
+  [09] tier0.dll+0004D4A8
+  [10] tier0.dll+0000B778
+  [11] engine.dll+00024453
+  [12] engine.dll+00025502
+  [13] tier0.dll+00006890
+  [14] engine.dll+000AEA68
+  [15] engine.dll+0009CF69
+  [16] engine.dll+0009A793
+  [17] datacache.dll+00063DC0
+  [18] datacache.dll+00063DC0
+  [19] tier0.dll+00006890
+  [20] engine.dll+000AABA0
+  [21] engine.dll+000AABA0
+  [22] engine.dll+0002D3B0
+  [23] engine.dll+0002D3B0
+  [24] engine.dll+000AABA0
+  [25] steamnetworkingsockets.dll+0001D436
+  [26] steamnetworkingsockets.dll+0008F874
+  [27] tier0.dll+0001424E
+  [28] engine.dll+000D41DD
+  [29] engine.dll+000B378A
+  [30] engine.dll+000E0496
+  [31] engine.dll+000E056B
+  [32] engine.dll+000CA1D4
+  [33] datacache.dll+00063DC0
+  [34] tier0.dll+0000FE50
+  [35] datacache.dll+00063DC0
+  [36] datacache.dll+0000302C
+  [37] ntdll.dll+00061A30
+  [38] ntdll.dll+00061B4A
+  [39] tier0.dll+00008555
+  [40] tier0.dll+0000859A
+  [41] inputsystem.dll+000346D8
+  [42] vstdlib.dll+00003D1C
+  [43] vstdlib.dll+00003D2B
+  [44] materialsystem.dll+00064FD7
+  [45] materialsystem.dll+00096528
+  [46] materialsystem.dll+00019A40
+  [47] materialsystem.dll+00019A71
+
+---- last operations (newest last) ----
+---- end of trace ----
+(0 entries, 0 dropped)
+
+================================================================
+  end of report
+================================================================
